@@ -1,0 +1,23 @@
+<div class="registration-form">
+    <h2 class="registration-form__join">Запишитесь на курс</h2>
+    <ul class="registration-form__advantages-list">
+        <li class="registration-form__advantage">Телефон</li>
+        <li class="registration-form__advantage">Телефон</li>
+        <li class="registration-form__advantage">Телефон</li>
+        <li class="registration-form__advantage">Телефон</li>
+    </ul>
+    <div class="registration-form__course-info-block">
+        <span class="registration-form__course-info">Старт курса:<strong>7 сентября</strong></span>
+        <span class="registration-form__course-info">Осталось:<strong>19 мест</strong></span>
+    </div>
+    <form class="registration-form__form" name="registerForm" onsubmit="return validateForm()" method="post" id="registerForm"> 
+        <input type="text" name="Name" class="registration-form__input" placeholder="Имя">
+        <input type="text" name="Phone" class="registration-form__input" placeholder="Телефон">
+        <input type="text" name="Email" class="registration-form__input" placeholder="Email">
+        <input type="submit" value="Записаться" class="registration-form__submit-btn">
+        <label class="registration-form__checkbox-container">Я согласен с условиями обработки <mark>персональных данных</mark> 
+            <input type="checkbox" name="formChecbox" checked="checked">
+            <span class="registration-form__checkbox-checkmark"></span> 
+        </label>
+    </form>
+</div>
