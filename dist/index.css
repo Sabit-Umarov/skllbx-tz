@@ -7,13 +7,26 @@
   transition: .3s;
 }
 
-.page-wrapper {
-  margin: auto;
-  max-width: 1170px;
-  padding: 66px 0 90px;
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.title {
+.content {
+  width: 100%;
+  max-width: 1170px;
+  padding: 20px 0;
+}
+
+.content__title {
   font-family: "Roboto",sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -23,7 +36,7 @@
   letter-spacing: -.5px;
 }
 
-.content-container {
+.content__section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,15 +422,16 @@
 }
 
 @media screen and (max-width:1219px) {
-  .page-wrapper {
+  .content {
     max-width: 710px;
+    padding: 66px 0 90px;
   }
 
-  .title {
+  .content__title {
     font-size: 45px;
   }
 
-  .content-container {
+  .content__section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -473,12 +487,12 @@
 }
 
 @media screen and (max-width:599px) {
-  .page-wrapper {
+  .content {
     max-width: 100%;
     padding-bottom: 0;
   }
 
-  .title {
+  .content__title {
     margin: 0 24px;
     font-size: 38px;
   }
@@ -510,7 +524,7 @@
   .registration-form__join {
     font-size: 30px;
     text-align: left;
-    width: 50%;
+    width: 33%;
   }
 
   .registration-form__course-info-block {
@@ -519,5 +533,9 @@
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 9px;
+  }
+
+  .registration-form__form {
+    max-width: 100%;
   }
 }

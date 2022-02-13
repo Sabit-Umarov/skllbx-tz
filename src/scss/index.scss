@@ -49,38 +49,47 @@ $mobile: 599px;
     transition: 0.3s;
 }
 
-.page-wrapper {
-    margin: auto;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.content {
+    width: 100%;
     max-width: 1170px;
-    padding: 66px 0 90px 0;
+    padding: 20px 0;
     @media screen and (max-width: $tablet) {
         max-width: 710px;
+        padding: 66px 0 90px 0;
     }
     @media screen and (max-width: $mobile) {
         max-width: 100%;
         padding-bottom: 0;
     }
-}
-
-.title {
-    @include roboto-bold;
-    text-align: center;
-    padding-bottom: 66px;
-    font-size: 55px;
-    letter-spacing: $defaultLetterSpacing;
-    @media screen and (max-width: $tablet) {
-        font-size: 45px;
+    //.content__title
+    &__title {
+        @include roboto-bold;
+        text-align: center;
+        padding-bottom: 66px;
+        font-size: 55px;
+        letter-spacing: $defaultLetterSpacing;
+        @media screen and (max-width: $tablet) {
+            font-size: 45px;
+        }
+        @media screen and (max-width: $mobile) {
+            margin: 0 24px;
+            font-size: 38px;
+        }
     }
-    @media screen and (max-width: $mobile) {
-        margin: 0 24px;
-        font-size: 38px;
-    }
-}
-
-.content-container {
-    display: flex;
-    @media screen and (max-width: $tablet) {
-        flex-direction: column;
+    //.content__section
+    &__section {
+        display: flex;
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -100,6 +109,7 @@ $mobile: 599px;
         width: 100%;
         height: 540px;
     }
+    //.price-info__discount-container
     &__discount-container {
         position: absolute;
         top: -20px;
@@ -123,22 +133,26 @@ $mobile: 599px;
             border-top: 10px solid black;
         }
     }
+    //.price-info__discount-caption
     &__discount-caption {
         @include roboto-bold;
         font-size: 14px;
         letter-spacing: 1px;
         text-transform: uppercase;
     }
+    //.price-info__discount-precentage
     &__discount-precentage {
         @include roboto-bold;
         font-size: 30px;
         letter-spacing: -0.75px;
     }
+    //.price-info__discount-description
     &__discount-description {
         @include roboto-regular;
         font-size: $smallFontSize;
         opacity: 0.7;
     }
+    //.price-info__block
     &__block {
         display: flex;
         flex-direction: column;
@@ -146,12 +160,14 @@ $mobile: 599px;
         justify-content: center;
         gap: 6px;
     }
+    //.price-info__old-price-description
     &__old-price-description {
         @include roboto-regular;
         font-size: $smallFontSize;
         letter-spacing: $defaultLetterSpacing;
         opacity: 0.5;
     }
+    //.price-info__old-price
     &__old-price {
         @include roboto-slab-light;
         font-size: 38px;
@@ -162,6 +178,7 @@ $mobile: 599px;
             font-size: 36px;
         }
     }
+    //.price-info__installment-plan-price
     &__installment-plan-price {
         @include roboto-slab-regular;
         font-size: 80px;
@@ -172,6 +189,7 @@ $mobile: 599px;
             font-size: 56px;
         }
     }
+    //.price-info__installment-plan-price-description
     &__installment-plan-price-description {
         @include roboto-bold;
         font-size: 23px;
@@ -183,6 +201,7 @@ $mobile: 599px;
             font-size: 18px;
         }
     }
+    //.price-info__for-firsts-price
     &__for-firsts-price {
         @include roboto-slab-light;
         font-size: 50px;
@@ -191,6 +210,7 @@ $mobile: 599px;
             font-size: 40px;
         }
     }
+    //.price-info__for-firsts-price-description
     &__for-firsts-price-description {
         @include roboto-regular;
         font-size: 20px;
@@ -218,6 +238,7 @@ $mobile: 599px;
     @media screen and (max-width: $mobile) {
         padding: 40px 24px;
     }
+    //.registration-form__join
     &__join {
         @include roboto-bold;
         font-size: 34px;
@@ -230,9 +251,10 @@ $mobile: 599px;
         @media screen and (max-width: $mobile) {
             font-size: 30px;
             text-align: left;
-            width: 50%;
+            width: 33%;
         }
     }
+    //.registration-form__advantages-list
     &__advantages-list {
         list-style-type: none;
         display: flex;
@@ -240,6 +262,7 @@ $mobile: 599px;
         gap: 14px;
         margin-bottom: 44px;
     }
+    //.registration-form__advantage
     &__advantage {
         @include open-sans-regular;
         color: $primaryText;
@@ -259,6 +282,7 @@ $mobile: 599px;
 
         }
     }
+    //.registration-form__course-info-block
     &__course-info-block {
         display: flex;
         gap: 34px;
@@ -271,6 +295,7 @@ $mobile: 599px;
             gap: 9px;
         }
     }
+    //.registration-form__course-info
     &__course-info {
         @include roboto-regular;
         font-size: $smallFontSize;
@@ -282,6 +307,7 @@ $mobile: 599px;
             padding-left: 8px;
         }
     }
+    //.registration-form__form
     &__form {
         display: flex;
         flex-direction: column;
@@ -293,7 +319,11 @@ $mobile: 599px;
             width: 100%;
             align-self: center;
         }
+        @media screen and (max-width: $mobile) {
+            max-width: 100%;
+        }
     }
+    //.registration-form__input
     &__input {
         width: 100%;
         padding: 16px 30px;
@@ -309,6 +339,7 @@ $mobile: 599px;
             border-color: $primary;
         }
     }
+    //.registration-form__submit-btn
     &__submit-btn {
         padding: 24px 0;
         text-transform: uppercase;
@@ -324,6 +355,7 @@ $mobile: 599px;
             order: 1;
         }
     }
+    //.registration-form__checkbox-container
     &__checkbox-container {
         @include open-sans-regular;
         display: block;
@@ -362,6 +394,7 @@ $mobile: 599px;
             transform: rotate(45deg);
         }
     }
+    //.registration-form__checkbox-checkmark
     &__checkbox-checkmark {
         position: absolute;
         top: 0;

@@ -1,4 +1,9 @@
+document.getElementById("registerForm").addEventListener("submit", function(event){
+    event.preventDefault()
+});
+
 function validateForm() {
+
     let name = document.forms["registerForm"]["Name"];
     let phone = document.forms["registerForm"]["Phone"];
     let email = document.forms["registerForm"]["Email"];
@@ -27,5 +32,9 @@ function validateForm() {
         alert("Неверный электронный адрес");
         return false;
     }
+    alert('Name - ' + name.value + 'phone - ' + phone.value + 'email - ' + email.value);
+    name.value = ''
+    phone.value = ''
+    email.value = ''
 
 }
