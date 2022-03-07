@@ -47,6 +47,7 @@ $mobile: 599px;
     padding: 0;
     box-sizing: border-box;
     transition: 0.3s;
+    @include roboto-regular;
 }
 
 .wrapper {
@@ -73,14 +74,14 @@ $mobile: 599px;
     &__title {
         @include roboto-bold;
         text-align: center;
-        padding-bottom: 66px;
+        margin-bottom: 66px;
         font-size: 55px;
         letter-spacing: $defaultLetterSpacing;
         @media screen and (max-width: $tablet) {
             font-size: 45px;
         }
         @media screen and (max-width: $mobile) {
-            margin: 0 24px;
+            margin: 0 24px 66px 24px;
             font-size: 38px;
         }
     }
@@ -148,7 +149,6 @@ $mobile: 599px;
     }
     //.price-info__discount-description
     &__discount-description {
-        @include roboto-regular;
         font-size: $smallFontSize;
         opacity: 0.7;
     }
@@ -162,7 +162,6 @@ $mobile: 599px;
     }
     //.price-info__old-price-description
     &__old-price-description {
-        @include roboto-regular;
         font-size: $smallFontSize;
         letter-spacing: $defaultLetterSpacing;
         opacity: 0.5;
@@ -212,7 +211,6 @@ $mobile: 599px;
     }
     //.price-info__for-firsts-price-description
     &__for-firsts-price-description {
-        @include roboto-regular;
         font-size: 20px;
         letter-spacing: $defaultLetterSpacing;
         @media screen and (max-width: $tablet) {
@@ -297,7 +295,6 @@ $mobile: 599px;
     }
     //.registration-form__course-info
     &__course-info {
-        @include roboto-regular;
         font-size: $smallFontSize;
         color: $primaryText;
         & strong {

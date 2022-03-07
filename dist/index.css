@@ -5,6 +5,9 @@
   box-sizing: border-box;
   -webkit-transition: .3s;
   transition: .3s;
+  font-family: "Roboto",sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .wrapper {
@@ -31,7 +34,7 @@
   font-weight: 700;
   font-style: normal;
   text-align: center;
-  padding-bottom: 66px;
+  margin-bottom: 66px;
   font-size: 55px;
   letter-spacing: -.5px;
 }
@@ -112,9 +115,6 @@
 }
 
 .price-info__discount-description {
-  font-family: "Roboto",sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 15px;
   opacity: .7;
 }
@@ -137,9 +137,6 @@
 }
 
 .price-info__old-price-description {
-  font-family: "Roboto",sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 15px;
   letter-spacing: -.5px;
   opacity: .5;
@@ -182,9 +179,6 @@
 }
 
 .price-info__for-firsts-price-description {
-  font-family: "Roboto",sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   letter-spacing: -.5px;
 }
@@ -204,10 +198,14 @@
   box-shadow: 0 2px 24px rgba(168,175,196,.3);
 }
 
+.registration-form__course-info strong,
 .registration-form__join {
   font-family: "Roboto",sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.registration-form__join {
   font-size: 34px;
   letter-spacing: -.5px;
   margin-bottom: 24px;
@@ -256,17 +254,12 @@
   letter-spacing: -.5px;
 }
 
-.registration-form__course-info,
-.registration-form__course-info strong {
-  font-family: "Roboto",sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.registration-form__course-info {
   font-size: 15px;
   color: #657195;
 }
 
 .registration-form__course-info strong {
-  font-weight: 700;
   color: #3d3bff;
   font-size: 20px;
   padding-left: 8px;
@@ -493,7 +486,7 @@
   }
 
   .content__title {
-    margin: 0 24px;
+    margin: 0 24px 66px;
     font-size: 38px;
   }
 
